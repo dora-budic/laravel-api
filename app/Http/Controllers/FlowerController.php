@@ -14,17 +14,12 @@ class FlowerController extends Controller
      */
     public function index()
     {
-        //
-    }
+      $flowers = Flower::all();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+      return response()->json([
+        'data' => $flowers,
+        'success' => true,
+      ]);
     }
 
     /**
@@ -45,17 +40,6 @@ class FlowerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Flower $flower)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Flower  $flower
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Flower $flower)
     {
         //
     }
